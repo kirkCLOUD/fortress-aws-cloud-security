@@ -1,0 +1,10 @@
+
+{
+  "TrailName": "FORTRESS-Centralized-Audit-Trail",
+  "IsMultiRegionTrail": true,
+  "IncludeGlobalServiceEvents": true,
+  "EnableLogFileValidation": true,
+  "IsOrganizationTrail": true,
+  "Logging": true,
+  "Purpose": "Centralized auditing of AWS API activity across organizational accounts"
+}
