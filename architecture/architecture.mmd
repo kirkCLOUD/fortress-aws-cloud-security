@@ -1,0 +1,27 @@
+
+flowchart TB
+    U["Administrator / Engineer"]
+    I["AWS IAM Identity Center"]
+
+    subgraph ORG["AWS Organizations"]
+        M["Management Account"]
+        S["Security Account"]
+        W["Workload Account"]
+    end
+
+    U --> I
+    I --> M
+    I --> S
+    I --> W
+
+    M --> SCP["Service Control Policies"]
+    S --> CT["AWS CloudTrail"]
+    S --> GD["Amazon GuardDuty"]
+    S --> CFG["AWS Config"]
+    S --> KMS["AWS KMS"]
+    W --> IAM["Least-Privilege IAM"]
+    W --> APP["Protected Workloads"]
+
+    CT --> LOG["Centralized Audit Logs"]
+    GD --> ALERT["Security Findings"]
+    CFG --> COM["Compliance Monitoring"]
