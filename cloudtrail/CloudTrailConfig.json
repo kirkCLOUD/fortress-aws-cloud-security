@@ -8,3 +8,4 @@
   "Logging": true,
   "Purpose": "Centralized auditing of AWS API activity across organizational accounts"
 }
+
